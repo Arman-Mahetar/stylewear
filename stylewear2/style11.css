@@ -1,0 +1,427 @@
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+  }
+
+  /* navigation bar style start-------------------------------------------------------- */
+  header {
+    position: relative;
+    z-index: 1000;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: #333; /* Dark theme */
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .navbar-brand {
+    font-size: 1rem;
+    color: #f0f0f0;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-brand:hover {
+    color: #4094e4; /* Accent color */
+  }
+  
+  .navbar-toggler {
+    border: none;
+    background: transparent;
+  }
+  
+  .navbar-toggler-icon i {
+    color: #fff;
+    font-size: 1.1rem;
+    /* font-weight: 500; */
+  }
+  
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+  
+  .navbar-nav .nav-item .nav-link {
+    color: #ddd;
+    font-size: 1rem;
+    margin-left: 15px;
+    text-transform: capitalize;
+    position: relative;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .navbar-nav .nav-item .nav-link:hover {
+    color: #4094e4;
+    transform: translateY(-2px);
+  }
+  
+  .navbar-nav .nav-item .nav-link.active {
+    color: #4094e4;
+  }
+  
+  .navbar-nav .nav-item .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #4094e4;
+    transition: width 0.3s ease-in-out;
+    margin-top: 3px;
+  }
+  
+  .navbar-nav .nav-item .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 992px) {
+    .navbar {
+      padding: 10px;
+    }
+  
+    .navbar-nav {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .navbar-collapse {
+      background-color: #333; /* Keeps the theme consistent */
+      padding: 15px;
+      border-radius: 5px;
+    }
+  
+    .nav-item {
+      text-align: center;
+    }
+  }
+  
+  /* Animation for smooth appearance */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .navbar {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  
+  /* Hero Section Styles */
+  .hero {
+    /* background-color: #fafaf8; */
+    background-color: #BFBEBF;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+    transition: box-shadow 0.3s ease-in-out;
+    padding: 5rem 0;
+  }
+  
+
+  
+  .hero-content h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .hero-content p.lead {
+    font-size: 12rem;
+    font-weight: 500;
+  }
+  
+  .hero-content p#overview {
+    font-size: 1.7rem;
+    line-height: 1.4rem;
+    text-align:justify;
+    /* font-size: 19px; */
+    font-weight: 500;
+    text-transform: capitalize;
+    color: rgb(43, 44, 43); 
+  }
+  
+   .fa-shirt {
+    color: #007bff;
+    font-size:3.5rem ;
+  }
+
+  
+  /* Media Queries */
+  @media (max-width: 767px) {
+    
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero-content p.lead {
+      font-size: 1.25rem;
+    }
+  
+    .hero-content p#overview {
+      font-size: 1rem;
+    }
+  
+    .hero-content .fa-shirt {
+      font-size: 3.5rem !important;
+      margin-right: 1rem !important;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+   
+    .hero-content h1 {
+      font-size: 1.8rem;
+    }
+  
+    .hero-content p.lead {
+      font-size: 1.375rem;
+    }
+  
+    .hero-content p#overview {
+      font-size: 1.1rem;
+    }
+  
+     .fa-shirt {
+      font-size: 3.5rem !important;
+      margin-right: 1.25rem !important;
+
+    }
+  }
+  
+  @media (min-width: 992px) {
+   
+  
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-content p.lead {
+      font-size: 1.75rem;
+    }
+  
+    .hero-content p#overview {
+      font-size: 1.25rem;
+    }
+  
+    .hero-content .fa-shirt {
+      font-size: 1.8rem !important;
+      margin-right: 1.5rem !important;
+    }
+  }
+  /* Small Mobile Devices */
+@media (max-width: 480px) {
+    .hero-content h1 {
+      font-size: 1.25rem; /* Smaller font size for small screens */
+      margin-bottom: 0.5rem; /* Adjusted margin */
+    }
+  
+    .hero-content p.lead {
+      font-size: 1.1rem; /* Smaller font size for lead paragraph */
+      margin-bottom: 0.5rem; /* Adjusted margin */
+    }
+  
+    .hero-content p#overview {
+      font-size: 0.9rem; /* Smaller font size for overview paragraph */
+      line-height: 1.4; /* Adjusted line height */
+      margin-bottom: 1rem; /* Adjusted margin */
+    }
+  
+     .fa-shirt {
+      font-size: 2rem !important; /* Smaller icon size */
+      margin-right: 0.5rem !important; /* Adjusted margin */
+    }
+  }
+  
+
+  /* hero section style end ---------------------------------------------------------------- */
+
+  /* about section start ---------------------------------------------------------------- */
+
+#about-page{
+    /* margin-top: 1.5rem; */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+    transition: box-shadow 0.3s ease-in-out;
+    padding: 5rem 0;
+    /* background-color: #F7F3EC;
+     */
+     background-color: #f8f8e1;
+}
+.about-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+ 
+  
+  .about-content p{
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    text-align:justify;
+    /* font-size: 19px; */
+    font-weight: 500;
+    text-transform: capitalize;
+    color: rgb(43, 44, 43); 
+  }
+  
+  /* Media Queries */
+  @media (max-width: 767px) {
+    
+    #about-page{
+      /* margin-top: 1rem; */
+      padding: 3rem 0;
+    }
+  
+    .about-content h2 {
+      font-size: 1.8rem;
+    }
+  
+    .about-content p{
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+   
+    #about-page{
+      /* margin-top: 1rem; */
+      padding: 3rem 0;
+    }
+  
+    .about-content h2 {
+      font-size: 2rem;
+    }
+  
+    .about-content p{
+      font-size: 1.4rem;
+    }
+  }
+
+
+  /* about section end ---------------------------------------------------------------- */
+
+  .about-part-5 {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+.main-heading-about {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contenor-part-5 {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.client-logos {
+    display: inline-block;
+    animation: marquee 15s linear infinite;
+}
+
+.our-client {
+    height: 100px; /* Adjust height as needed */
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+}
+
+.our-client:hover {
+    transform: scale(1.1);
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+@media (max-width: 576px) {
+    .main-heading-about {
+        font-size: 2rem;
+    }
+
+    .our-client {
+        height: 80px; /* Adjust height for smaller screens */
+    }
+}
+.r1{
+  margin-bottom: 1rem;
+}
+.reviews{
+  color: #f0f0f0;
+}
+  .reviewcustom{
+    background-color: #333;
+    color:#050005
+  }
+  #contact-us{
+    background-color: #EFEFEF;
+  }
+  /* Custom Styles for Our Products Section */
+.our-product {
+  background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.main-heading-about {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-mrp {
+  color: #888;
+  font-size: 1rem;
+}
+
+.our-prise {
+  color: #ff5722;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.product-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.product-btn:hover {
+  background-color: #0056b3;
+}
+
+.galery-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.galery-btn:hover {
+  background-color: #218838;
+}
